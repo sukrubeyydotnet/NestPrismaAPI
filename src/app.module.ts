@@ -22,7 +22,7 @@ import { CustomLoggerModule } from './custom-logger/custom-logger.module';
     {
       name: 'longer',
       ttl: 60000,
-      limit: 100
+      limit: 80
     }]),
     CustomLoggerModule
 
