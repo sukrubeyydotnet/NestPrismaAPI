@@ -24,12 +24,18 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project is a REST API built with the NestJS framework and Prisma ORM, using PostgreSQL as the database. Additionally, it includes validation, pipes, rate limiting, exception filters, DTO schema, and integration with Neon Postgres.
 
 ## Installation
 
 ```bash
 $ npm install
+```
+
+## Environment Setup
+To run this project, you need to create a Prisma account and set up the DATABASE_URL in the .env file located in the project root directory.
+```bash
+DATABASE_URL="your_database_url_here"
 ```
 
 ## Running the app
@@ -44,6 +50,40 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+
+## Endpoints
+```bash
+# Get All Employees
+GET /api/employees
+# Get employees by role
+GET /api/employees?role='ROLE'
+  #Role values can be ADMIN, INTERN, or ENGINEER.
+
+# Get an employee by ID
+GET /api/employees/id
+
+# Create an employee 
+POST /api/employees
+
+# Delete an employee 
+DELETE /api/employees/id
+
+# Update an employee
+PATCH /api/employees/id
+
+```
+
+# Postman Collection
+All endpoints are available in a ready-to-use Postman collection included in the project. You can import this collection to Postman to test the endpoints visually.
+  
+# Validation and Pipes
+This project uses NestJS built-in validation and pipes to ensure data integrity and transformation. Validators are used to enforce rules and constraints on the incoming data.
+
+# Rate Limiting
+Rate limiting is implemented to prevent abuse and ensure the API's availability. You can configure rate limiting settings in the app.module.ts and employees.controller file.
+
+
 
 ## Test
 
