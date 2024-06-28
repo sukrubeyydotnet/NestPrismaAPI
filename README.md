@@ -53,25 +53,31 @@ $ npm run start:prod
 
 
 ## Endpoints
+
 ```bash
-# Get All Employees
-GET /api/employees
 # Get employees by role
 GET /api/employees?role='ROLE'
   #Role values can be ADMIN, INTERN, or ENGINEER.
+```
 
+```bash
 # Get an employee by ID
 GET /api/employees/id
+```
 
+```bash
 # Create an employee 
 POST /api/employees
+```
 
+```bash
 # Delete an employee 
 DELETE /api/employees/id
+```
 
+```bash
 # Update an employee
 PATCH /api/employees/id
-
 ```
 
 # Postman Collection
